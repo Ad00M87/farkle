@@ -1,3 +1,11 @@
+export const resetRoll = () => {
+  return { type: 'RESET_ROLL' }
+}
+
+export const updateScores = (scores) => {
+  return { type: 'UPDATE_SCORES', scores }
+}
+
 export const rollDice = () => {
   return (dispatch, getState) => {
     let { keep, dice } = getState().currentGame;
